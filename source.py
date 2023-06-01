@@ -50,8 +50,10 @@ def obfuscate_word(word):
     return obfuscated_word
 
 skript_code = ""
-while not skript_code:
-    skript_code = input("Enter the script code: ")
+line = input("Enter the skript code (type END to finish)\n")
+while line.strip() != "END":
+    skript_code += line + "\n"
+    line = input()
 
 obfuscated_code = obfuscate_skript(skript_code)
 obfuscated_skript = obfuscate_skript2(obfuscated_code)
