@@ -49,12 +49,11 @@ def obfuscate_word(word):
             obfuscated_word += char
     return obfuscated_word
 
-skript_code = '''
-on chat:
-    set {_msgtesttesttest} to "test"
-    broadcast {_msgtesttesttest}
-'''
+skript_code = ""
+while not skript_code:
+    skript_code = input("Enter the script code: ")
 
 obfuscated_code = obfuscate_skript(skript_code)
 obfuscated_skript = obfuscate_skript2(obfuscated_code)
 print(obfuscated_skript)
+input("Press enter to exit..")
